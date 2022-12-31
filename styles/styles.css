@@ -104,6 +104,13 @@ section {
   transform: translateY(-50%);
   /* Button Class in Index */
 }
+.controls .active-button {
+  background-color: var(--color-secondary) !important;
+  transition: var(--transition-1);
+}
+.controls .active-button i {
+  background-color: var(--color-secondary);
+}
 .controls .control {
   padding: 1rem;
   cursor: pointer;

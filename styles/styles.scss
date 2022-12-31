@@ -107,6 +107,14 @@ section{
     justify-content: center;
     transform: translateY(-50%);
 
+    .active-button{
+         background-color: var(--color-secondary) !important;
+         transition: var(--transition-1);
+         i{
+            background-color: var(--color-secondary);
+         }
+    }
+
     /* Button Class in Index */
     .control{
         padding: 1rem;
