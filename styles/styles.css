@@ -31,4 +31,28 @@ body {
   color: var(--color-white);
   /* transition between primary color and default color */
   transition: all 0.4s ease-in-out;
+}
+
+/* Anchor Tag Styling */
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+}
+
+/* Header Styling */
+header {
+  height: 100vh;
+  color: var(--color-white);
+}
+
+/* Section Styling */
+section {
+  min-height: 100vh;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 3rem 10rem;
 }/*# sourceMappingURL=styles.css.map */
