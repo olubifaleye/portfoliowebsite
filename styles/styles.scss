@@ -21,6 +21,9 @@
     --color-grey-5: #2a2e35;
     --color-grey-6: #12181b;
     --br-sm-2: 14px;
+
+    /* transition variables */
+    --transition-1: all .4s ease-in-out;
 }
 
 body{
@@ -32,7 +35,7 @@ body{
     color: var(--color-white);
 
     /* transition between primary color and default color */
-    transition: all .4s ease-in-out;
+    transition: var(--transition-1);
 }
 
 /* Anchor Tag Styling */
@@ -57,5 +60,35 @@ section{
     left: 0;
     top: 0;
     padding: 3rem 10rem;
+}
 
+.section{
+    transform: translateY(-100%) scale(0);
+    transition: var(--transition-1);
+    background-color: var(--color-primary);
+}
+
+.sec1{
+    display: none;
+    transform: translateY(0) scale(1);
+}
+
+.sec2{
+    display: none;
+    transform: translateY(0) scale(1);
+}
+
+.sec3{
+    display: none;
+    transform: translateY(0) scale(1);
+}
+
+.sec4{
+    display: none;
+    transform: translateY(0) scale(1);
+}
+
+.sec5{
+    display: none;
+    transform: translateY(0) scale(1);
 }
