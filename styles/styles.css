@@ -69,26 +69,53 @@ section {
 .sec1 {
   display: none;
   transform: translateY(0) scale(1);
+  background-color: red;
 }
 
 .sec2 {
   display: none;
   transform: translateY(0) scale(1);
+  background-color: green;
 }
 
 .sec3 {
   display: none;
   transform: translateY(0) scale(1);
+  background-color: orange;
 }
 
 .sec4 {
   display: none;
   transform: translateY(0) scale(1);
+  background-color: yellow;
 }
 
 .sec5 {
   display: none;
   transform: translateY(0) scale(1);
+  background-color: blue;
+}
+
+.active {
+  display: block;
+  -webkit-animation: scaleAnim 1.1s ease-in-out;
+          animation: scaleAnim 1.1s ease-in-out;
+}
+@-webkit-keyframes scaleAnim {
+  0% {
+    transform: translateY(-100%) scaleY(0);
+  }
+  100% {
+    transform: translateY(0%) scaleY(1);
+  }
+}
+@keyframes scaleAnim {
+  0% {
+    transform: translateY(-100%) scaleY(0);
+  }
+  100% {
+    transform: translateY(0%) scaleY(1);
+  }
 }
 
 /* Controls Styling */

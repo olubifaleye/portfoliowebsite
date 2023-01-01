@@ -20,6 +20,30 @@ function pageTransitions(){
             this.className += 'active-button'
         })
     }
+
+    //Sections Active class
+    allSections.addEventListener('click', (e) =>{
+        //content inside the target of the cursor click
+        const id = e.target.dataset.id; 
+
+        if(id){
+            //remove seelcted from the other buttons
+            sectionButtons.forEach((button) =>{
+                button.classList.remove('active')
+            })
+            e.target.classList.add('active')
+
+            //Hide other sections 
+            sections.forEach((section) => {
+                section.classList.remove('active')
+            })
+            
+            //collect and store an element from index.html by id 
+            const element = document.getElementById(id);
+
+            element.classList.add('active')
+        }
+    })
 }
 
 pageTransitions()
