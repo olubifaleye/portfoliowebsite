@@ -69,31 +69,26 @@ section {
 .sec1 {
   display: none;
   transform: translateY(0) scale(1);
-  background-color: red;
 }
 
 .sec2 {
   display: none;
   transform: translateY(0) scale(1);
-  background-color: green;
 }
 
 .sec3 {
   display: none;
   transform: translateY(0) scale(1);
-  background-color: orange;
 }
 
 .sec4 {
   display: none;
   transform: translateY(0) scale(1);
-  background-color: yellow;
 }
 
 .sec5 {
   display: none;
   transform: translateY(0) scale(1);
-  background-color: blue;
 }
 
 .active {
@@ -156,4 +151,28 @@ section {
   font-size: 1.2rem;
   color: var(--color-grey-2);
   pointer-events: none;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/* Header Content Styling*/
+.header-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100%;
+}
+.header-content .left-header {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.header-content .left-header .header-shape {
+  transition: var(--transition-1);
+  width: 65%;
+  height: 100%;
+  background-color: var(--color-secondary);
+  z-index: -1;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+/* Independant Content*//*# sourceMappingURL=styles.css.map */
