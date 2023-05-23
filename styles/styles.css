@@ -66,6 +66,7 @@ section {
   background-color: var(--color-primary);
 }
 
+/* Sections */
 .sec1 {
   display: none;
   transform: translateY(0) scale(1);
@@ -91,18 +92,10 @@ section {
   transform: translateY(0) scale(1);
 }
 
+/* Animation for transition between different section divs */
 .active {
   display: block;
-  -webkit-animation: scaleAnim 1.1s ease-in-out;
-          animation: scaleAnim 1.1s ease-in-out;
-}
-@-webkit-keyframes scaleAnim {
-  0% {
-    transform: translateY(-100%) scaleY(0);
-  }
-  100% {
-    transform: translateY(0%) scaleY(1);
-  }
+  animation: scaleAnim 1s ease-in-out;
 }
 @keyframes scaleAnim {
   0% {
@@ -124,6 +117,7 @@ section {
   align-items: center;
   justify-content: center;
   transform: translateY(-50%);
+  /* Styling for active page button to change colour during transition */
   /* Button Class in Index */
 }
 .controls .active-button {
@@ -131,7 +125,7 @@ section {
   transition: var(--transition-1);
 }
 .controls .active-button i {
-  background-color: var(--color-secondary);
+  color: var(--color-white) !important;
 }
 .controls .control {
   padding: 1rem;
@@ -158,21 +152,77 @@ section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   height: 100%;
+  position: relative;
+  /* Styling for the right side of the header text*/
 }
 .header-content .left-header {
   display: flex;
   align-items: center;
   position: relative;
+  /* Create a div for shape behind profile picture using clip-path and z-index */
+  /* Styling for image container set to secondary colour black and added border */
 }
 .header-content .left-header .header-shape {
   transition: var(--transition-1);
   width: 65%;
   height: 100%;
   background-color: var(--color-secondary);
-  z-index: -1;
+  position: absolute;
   top: 0;
   left: 0;
-  position: absolute;
+  z-index: -1;
+  -webkit-clip-path: polygon(0 0, 48% 0, 83% 100%, 0 100%);
+  clip-path: polygon(0 0, 48% 0, 83% 100%, 0% 100%);
+}
+.header-content .left-header .image {
+  border-radius: var(--br-sm-2);
+  height: 80%;
+  width: 60%;
+  margin: 4rem;
+  background-color: var(--color-black);
+  transition: var(--transition-1);
+  position: relative;
+  border: solid var(--color-white);
+  /* Added styling to profile picture image*/
+}
+.header-content .left-header .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: var(--transition-1);
+  position: relative;
+  /*Initially set greyscale to 100, start off as grey
+    Then upon hover add back colour of image in during transition
+  */
+  filter: grayscale(100);
+}
+.header-content .left-header .image img:hover {
+  filter: grayscale(0);
+}
+.header-content .right-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 18rem;
+  /*Styling for Name Intro and Secondary Colour for Span Name */
+}
+.header-content .right-header .name {
+  font-size: 3rem;
+}
+.header-content .right-header .name span {
+  color: var(--color-secondary);
+}
+.header-content .right-header p {
+  margin: 1.5rem 0;
+  line-height: 2rem;
 }
 
-/* Independant Content*//*# sourceMappingURL=styles.css.map */
+/* Independant Content*/
+/* Styling for download CV button*/
+.main-button {
+  border-radius: 30px;
+  color: inherit;
+  font-weight: 600;
+  position: relative;
+}/*# sourceMappingURL=styles.css.map */

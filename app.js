@@ -12,12 +12,12 @@ function pageTransitions(){
         //each indexed button will add a click event listener
         sectionButton[i].addEventListener('click', function(){
             //set button clicked to be current button
-            let currenButton = document.querySelectorAll('.active-button');
+            let currentButton = document.querySelectorAll('.active-button');
 
             //set first button clicked to be empty
-            currenButton[0].className = currenButton[0].className.replace('active-button', '');
+            currentButton[0].className = currentButton[0].className.replace('active-button', '');
             
-            this.className += 'active-button'
+            this.className += ' active-button'
         })
     }
 
