@@ -23,6 +23,7 @@
   --br-sm-2: 14px;
   /* transition variables */
   --transition-1: all .4s ease-in-out;
+  --transition-2: all .4s ease-out;
   --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
 }
 
@@ -219,10 +220,48 @@ section {
 }
 
 /* Independant Content*/
+.button-container {
+  display: flex;
+  align-self: flex-start;
+}
+
 /* Styling for download CV button*/
 .main-button {
   border-radius: 30px;
   color: inherit;
   font-weight: 600;
   position: relative;
+  border: 3px solid var(--color-secondary);
+  display: flex;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.main-button .button-text {
+  padding: 0 2rem;
+}
+.main-button .button-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-secondary);
+  border-radius: 50%;
+  padding: 1rem;
+}
+.main-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-secondary);
+  z-index: -1;
+  transition: var(--transition-1);
+  transform: translateX(100%);
+  transform-origin: right;
+}
+.main-button:hover::before, .main-button:focus::before {
+  transform: scaleX(1);
 }/*# sourceMappingURL=styles.css.map */
