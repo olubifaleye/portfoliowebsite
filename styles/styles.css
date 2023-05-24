@@ -291,6 +291,93 @@ section {
   text-transform: uppercase;
 }
 
+/* Styling for progress bars section*/
+.about-statistics {
+  padding-bottom: 4rem;
+  /* Styling for progress bars containers */
+}
+.about-statistics h4 {
+  text-transform: uppercase;
+  padding-bottom: 2rem;
+}
+.about-statistics .progress-bars {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  /* Styling for a progress bar and its title and percentage */
+}
+.about-statistics .progress-bars .progress-bar {
+  display: flex;
+  flex-direction: column;
+}
+.about-statistics .progress-bars .progress-bar .progress-title {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.about-statistics .progress-bars .progress-bar .progress-container {
+  display: flex;
+  align-items: center;
+  /* Progress bar itself */
+}
+.about-statistics .progress-bars .progress-bar .progress-container .progress-text {
+  color: var(--color-grey-2);
+}
+.about-statistics .progress-bars .progress-bar .progress-container .progress {
+  width: 100%;
+  height: 0.45rem;
+  background-color: var(--color-grey-4);
+  position: relative;
+  margin-left: 1rem;
+  /* Individual progress bar width for each skill */
+}
+.about-statistics .progress-bars .progress-bar .progress-container .progress span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: var(--color-secondary);
+  transition: var(--transition-1);
+}
+.about-statistics .progress-bars .progress-bar .progress-container .progress .html {
+  width: 85%;
+}
+.about-statistics .progress-bars .progress-bar .progress-container .progress .python, .about-statistics .progress-bars .progress-bar .progress-container .progress .sql {
+  width: 80%;
+}
+.about-statistics .progress-bars .progress-bar .progress-container .progress .javascript {
+  width: 50%;
+}
+.about-statistics .progress-bars .progress-bar .progress-container .progress .css3 {
+  width: 75%;
+}
+.about-statistics .progress-bars .progress-bar .progress-container .progress .react {
+  width: 35%;
+}
+.about-statistics .progress-bars .progress-bar .progress-container .progress .typescript {
+  width: 25%;
+}
+.about-statistics .progress-bars .progress-bar .progress-container .progress .git {
+  width: 70%;
+}
+.about-statistics .progress-bars .progress-bar .progress-container .progress .figma {
+  width: 90%;
+}
+.about-statistics .progress-bars .progress-bar .progress-container .progress .uml {
+  width: 80%;
+}
+.about-statistics .progress-bars .progress-bar .progress-container .progress .powerbi {
+  width: 65%;
+}
+.about-statistics .progress-bars .progress-bar .progress-container .progress .apache-superset {
+  width: 45%;
+}
+.about-statistics .progress-bars .progress-bar .progress-container .progress .microsoft {
+  width: 70%;
+}
+.about-statistics .progress-bars .progress-bar .progress-container .progress .video-editing {
+  width: 40%;
+}
+
 /* Independant Content*/
 /* Styling for button container */
 .button-container {
