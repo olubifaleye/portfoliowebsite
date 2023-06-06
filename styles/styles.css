@@ -10,7 +10,7 @@
 :root {
   /* Colour variables */
   --color-primary: #191d2b;
-  --color-secondary: #565145;
+  --color-secondary: #ABA896;
   --color-white: #FFFFFF;
   --color-black: #000;
   --color-grey-0: #f8f8f8;
@@ -25,6 +25,34 @@
   --transition-1: all .4s ease-in-out;
   --transition-2: all .4s ease-out;
   --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
+  /* Color variables for main title and timeline components */
+  --color-main-title-background: #FFFFFF;
+  --color-main-title-span: #ABA896;
+  --color-main-title-1: #191d2b;
+  --color-timeline: #2a2e35;
+  --color-timeline-text: #b2becd;
+  --color-timeline-duration: ;
+}
+
+/* Light mode color variables */
+.light-mode {
+  --color-primary: #FFFFFF;
+  --color-white: #000;
+  --color-secondary: #6D6D5A;
+  --color-black: #000;
+  --color-grey-0: #f8f8f8;
+  --color-grey-1: #6c7983;
+  --color-grey-2: #6c7983;
+  --color-grey-3: #6c7983;
+  --color-grey-4: #454e56;
+  --color-grey-5: #C9C9C9;
+  --color-grey-6: #12181b;
+  /* Color variables for main title and timeline components */
+  --color-main-title-background: #000;
+  --color-main-title-span: #6D6D5A;
+  --color-timeline: #2a2e35;
+  --color-timeline-text: #000;
+  --color-timeline-duration: #FFFFFF;
 }
 
 body {
@@ -174,6 +202,7 @@ section {
   z-index: -1;
   -webkit-clip-path: polygon(0 0, 48% 0, 83% 100%, 0 100%);
   clip-path: polygon(0 0, 48% 0, 83% 100%, 0% 100%);
+  border: 4px solid var(--color-white);
 }
 .header-content .left-header .image {
   border-radius: var(--br-sm-2);
@@ -257,14 +286,14 @@ section {
 .about-container .right-about .about-item .about-text .large-text {
   font-size: 3rem;
   font-weight: 700;
-  color: var(--color-secondary);
+  color: var(--color-white);
 }
 .about-container .right-about .about-item .about-text .small-text {
   padding-left: 3rem;
   position: relative;
   text-transform: uppercase;
   font-size: 1.2rem;
-  color: var(--color-grey-5);
+  color: var(--color-secondary);
   letter-spacing: 2px;
 }
 .about-container .right-about .about-item .about-text .small-text::before {
@@ -278,15 +307,14 @@ section {
 }
 .about-container .left-about {
   padding-right: 5rem;
-  text-align: justify;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  color: var(--color-grey-1);
+  color: var(--color-white);
 }
 .about-container .left-about p {
   line-height: 2rem;
 }
-.about-container .left-about h4 {
+.about-container .left-about h3 {
   font-size: 2rem;
   text-transform: uppercase;
 }
@@ -320,12 +348,12 @@ section {
   /* Progress bar itself */
 }
 .about-statistics .progress-bars .progress-bar .progress-container .progress-text {
-  color: var(--color-grey-2);
+  color: var(--color-timeline-text);
 }
 .about-statistics .progress-bars .progress-bar .progress-container .progress {
   width: 100%;
   height: 0.45rem;
-  background-color: var(--color-grey-4);
+  background-color: var(--color-grey-5);
   position: relative;
   margin-left: 1rem;
   /* Individual progress bar width for each skill */
@@ -432,13 +460,13 @@ section {
 }
 .timeline .timeline-item .timeline-duration {
   padding: 0.2rem 0.6rem;
-  background-color: var(--color-grey-5);
+  background-color: var(--color-timeline);
   border-radius: 15px;
   display: inline-block;
   font-size: 0.8rem;
   text-transform: uppercase;
   font-weight: 500;
-  text-align: justify;
+  color: var(--color-timeline-duration);
 }
 .timeline .timeline-item h5 {
   padding: 1rem 0;
@@ -447,16 +475,17 @@ section {
   font-weight: 700;
 }
 .timeline .timeline-item h5 span {
-  color: var(--color-grey-2);
+  color: var(--color-secondary);
   font-weight: 500;
   font-size: 1.2rem;
 }
 .timeline .timeline-item p {
-  color: var(--color-grey-2);
+  color: var(--color-timeline-text);
 }
 
 /* Portfolio Styles*/
 .portfolio-text {
+  margin-top: 1rem;
   padding: 2rem 0;
   text-align: center;
 }
@@ -544,7 +573,139 @@ section {
   opacity: 1;
 }
 
+/* Contact Section Styles */
+.contact-content-container {
+  display: flex;
+  padding-top: 3.5rem;
+  /* Styling for input section in contact page */
+}
+.contact-content-container .left-contact {
+  flex: 2;
+}
+.contact-content-container .left-contact h3 {
+  margin-top: 1rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.contact-content-container .left-contact p {
+  margin: 1rem 0;
+  line-height: 2rem;
+}
+.contact-content-container .left-contact .contact-info .contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contact-content-container .left-contact .contact-info .contact-item p {
+  margin: 0.3rem 0 !important;
+  padding: 0 !important;
+}
+.contact-content-container .left-contact .contact-info .contact-item .icon {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+}
+.contact-content-container .left-contact .contact-info .contact-item .icon i {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+}
+.contact-content-container .left-contact .contact-icons {
+  display: flex;
+}
+.contact-content-container .left-contact .contact-icon {
+  display: flex;
+  margin-top: 2rem;
+}
+.contact-content-container .left-contact .contact-icon a {
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+  background-color: var(--color-grey-5);
+  cursor: pointer;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 0.4rem;
+  transition: var(--transition-1);
+}
+.contact-content-container .left-contact .contact-icon a:hover {
+  background-color: var(--color-secondary);
+}
+.contact-content-container .left-contact .contact-icon a:hover i {
+  color: var(--color-primary);
+}
+.contact-content-container .left-contact .contact-icon a i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+.contact-content-container .right-contact {
+  flex: 3;
+  margin-left: 3rem;
+  /* Styling for the inputs for the contact page */
+}
+.contact-content-container .right-contact h4 {
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
+.contact-content-container .right-contact .input-control {
+  margin: 1.5rem 0;
+}
+.contact-content-container .right-contact .input-control input, .contact-content-container .right-contact .input-control textarea {
+  border-radius: 30px;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  padding: 0.8rem 1.1rem;
+  border: 2px solid var(--color-white);
+  background-color: var(--color-grey-5);
+  width: 100%;
+  color: var(--color-white);
+  resize: none;
+}
+.contact-content-container .right-contact .input-control-2 {
+  display: flex;
+}
+.contact-content-container .right-contact .input-control-2 .label-content {
+  padding-left: 1.5rem;
+}
+.contact-content-container .right-contact .input-control-2 :last-child {
+  margin-left: 1.5rem;
+}
+.contact-content-container .right-contact .submit-button {
+  display: flex;
+  justify-content: flex-start;
+}
+
 /* Independant Content*/
+/* Styling for theme button */
+.theme-button {
+  top: 5%;
+  right: 2.5%;
+  cursor: pointer;
+  background-color: var(--color-grey-4);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  transition: var(--transition-1);
+  box-shadow: var(--box-shadow-1);
+  /* When the button is clicked raise it up */
+}
+.theme-button:active {
+  transform: translateY(-3px);
+}
+.theme-button i {
+  color: var(--color-grey-2);
+  font-size: 1.4rem;
+  pointer-events: none;
+}
+
 /* Styling for button container */
 .button-container {
   display: flex;
@@ -600,6 +761,7 @@ section {
   /* H2 Styling */
 }
 .main-title h2 {
+  color: var(--color-main-title-span);
   position: relative;
   text-transform: uppercase;
   font-size: 4rem;
@@ -607,17 +769,19 @@ section {
   /* Styling for the big text behind the header text */
 }
 .main-title h2 span {
-  color: var(--color-secondary);
+  color: var(--color-main-title-span);
 }
 .main-title h2 .big-text {
   position: absolute;
   top: 50%;
   left: 50%;
-  color: var(--color-grey-5);
+  color: var(--color-main-title-background);
   transition: var(--transition-1);
   z-index: -1;
   /* Styling translate to centre */
   transform: translate(-50%, -50%);
   font-weight: 800;
-  font-size: 6.3rem;
+  font-size: 8rem;
+  -webkit-text-fill-color: solid;
+  -webkit-text-stroke: 1px;
 }/*# sourceMappingURL=styles.css.map */
