@@ -9,6 +9,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+
+    <!-- Javascript Code for emails and sweet alert -->
+    <script src="sendMail.js"></script>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("qG7Rcvec32lbrwxAc");
+        })();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <title>Olubi's Portfolio</title>
 </head>
 <body class="main-content">
@@ -540,8 +556,8 @@
                                 <textarea name="" id="message" cols="15" rows="8" placeholder="Type message here..."></textarea>
                             </div>
 
-                            <div class="submit-button">
-                                <a href="" class="main-button">
+                            <div class="submit-button" onclick="sendMail()">
+                                <a href="#contact" class="main-button">
                                     <span class="button-text">
                                         Submit
                                     </span>
