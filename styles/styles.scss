@@ -36,6 +36,11 @@
     --color-timeline: #2a2e35;
     --color-timeline-text: #b2becd;
     --color-timeline-duration: ;
+
+    /* Form color variables */
+    --error-color: #dc3545;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
 }
 
 /* Light mode color variables */
@@ -772,6 +777,24 @@ section{
             justify-content: flex-start;
         }
     }
+}
+
+ /* Form input styling */
+.input-control input:focus {
+    outline: none;
+}
+
+.input-control.error input {
+    border-color: var(--error-color);
+}
+
+.input-control.success input {
+    border-color: var(--success-color);
+}
+
+
+.input-control small {
+    color: var(--error-color);
 }
 
 

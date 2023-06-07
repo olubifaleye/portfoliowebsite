@@ -537,23 +537,27 @@
 
                         <h4>Enter your details</h4>
 
-                        <form action="" class="contact-form">
+                        <form action="" class="contact-form" id="send-email">
                             <div class="input-control input-control-2">
                                 <label for="name" hidden class="label-content">Name</label>
                                 <input type="text" id="name" required placeholder="Enter your name">
+                                <small></small>
                                 
                                 <label for="email" hidden class="label-content">Email</label>
                                 <input type="email" id="email" required placeholder="Enter your email">
+                                <small></small>
                             </div>
 
                             <div class="input-control">
                                 <label for="subject" hidden class="label-content">Subject</label>
                                 <input type="text" id="subject" required placeholder="Enter your subject">
+                                <small></small>
                             </div>
 
                             <div class="input-control">
                                 <label for="message" hidden class="label-content">Message</label>
                                 <textarea name="" id="message" cols="15" rows="8" placeholder="Type message here..."></textarea>
+                                <small></small>
                             </div>
 
                             <div class="submit-button" onclick="sendMail()">
