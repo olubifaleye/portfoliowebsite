@@ -39,8 +39,7 @@
 
     /* Form color variables */
     --error-color: #dc3545;
-    --success-color: #28a745;
-    --warning-color: #ffc107;
+   
 }
 
 /* Light mode color variables */
@@ -64,6 +63,9 @@
     --color-timeline: #2a2e35;
     --color-timeline-text: #000;
     --color-timeline-duration: #FFFFFF;
+
+    /* Form color variables */
+    --error-color: #dc3545;
 }
 
 body{
@@ -195,6 +197,11 @@ section{
             color: var(--color-grey-2);
             pointer-events: none;
         }
+
+        // /* Focus styling for accessibility */
+        // &:focus{
+        //     outline: 7px solid var(--color-white);   
+        // }   
     }
 }
 
@@ -581,6 +588,11 @@ section{
             height: 300px;
             object-fit: cover;
             border-radius: 15px;
+            
+            /* Focus styling for accessibility */
+            &:focus{
+                outline: 8px solid var(--color-secondary);   
+            }
         }
         
         /* Card that is displayed when a portfolio image is hovered over */
@@ -628,6 +640,11 @@ section{
                     justify-content: center;
                     align-items: center;
                     transition: var(--transition-1);
+                    
+                    /* Focus styling for accessibility */
+                    &:focus{
+                        outline: 5px solid var(--color-white);   
+                    }
 
                     /* Setting Icon size and colour */
                     i{
@@ -657,7 +674,7 @@ section{
 /* Contact Section Styles */
 .contact-content-container{
     display: flex;
-    padding-top: 3.5rem;
+    padding-top: 2.5rem;
 
     .left-contact{
         flex: 2;
@@ -722,6 +739,12 @@ section{
                         color: var(--color-primary);
                     } 
                 }
+
+                /* Focus styling for accessibility */
+                &:focus{
+                    outline: 5px solid var(--color-secondary);   
+                }
+
                 i{
                     display: flex;
                     align-items: center;
@@ -741,10 +764,11 @@ section{
             margin-top: 1rem;
             text-transform: uppercase;
         }
-        
+    
         /* Styling for the inputs for the contact page */
         .input-control{
-            margin: 1.5rem 0;
+            margin: 0.8rem 0;
+            
             input, textarea{
                 border-radius: 30px;
                 font-size: inherit;
@@ -756,12 +780,13 @@ section{
                 width: 100%;
                 color: var(--color-white);
                 resize: none;
-            }
-        }
 
-        .input-control-2{
-            display: flex;
-            
+                /* Focus styling for accessibility */
+                &:focus{
+                    outline: 5px solid var(--color-secondary);   
+                }
+            }
+
             .label-content{
                 padding-left: 1.5rem;
             }
@@ -775,28 +800,28 @@ section{
         .submit-button{
             display: flex;
             justify-content: flex-start;
+            padding-left: 1.5rem;
+
+            /* Focus styling for accessibility */
+            &:focus{
+                outline: 5px solid var(--color-secondary);   
+            }
         }
     }
 }
 
- /* Form input styling */
-.input-control input:focus {
-    outline: none;
+/* Form Success and Error Indicator styling */
+.input-control.error{
+    #name, #email, #subject, #message{
+        border: 2px solid var(--error-color);
+    }
 }
 
-.input-control.error input {
-    border-color: var(--error-color);
+.input-control.success{
+    #name, #email, #subject, #message{
+        border: 2px solid var(--color-secondary);
+    }
 }
-
-.input-control.success input {
-    border-color: var(--success-color);
-}
-
-
-.input-control small {
-    color: var(--error-color);
-}
-
 
 /* Independant Content*/
 
@@ -815,6 +840,11 @@ section{
     position: fixed;
     transition: var(--transition-1);
     box-shadow: var(--box-shadow-1);
+
+    /* Focus styling for accessibility */
+    &:focus{
+        outline: 5px solid var(--color-white);   
+    }
 
     /* When the button is clicked raise it up */
     &:active{
@@ -878,6 +908,11 @@ section{
     /* Hover styling for download animation */
     &:hover::before, &:focus::before {
         transform: scaleX(1);
+    }
+
+    /* Focus styling for accessibility */
+    &:focus{
+        outline: 5px solid var(--color-secondary);   
     }
 }
 

@@ -32,6 +32,8 @@
   --color-timeline: #2a2e35;
   --color-timeline-text: #b2becd;
   --color-timeline-duration: ;
+  /* Form color variables */
+  --error-color: #dc3545;
 }
 
 /* Light mode color variables */
@@ -53,6 +55,8 @@
   --color-timeline: #2a2e35;
   --color-timeline-text: #000;
   --color-timeline-duration: #FFFFFF;
+  /* Form color variables */
+  --error-color: #dc3545;
 }
 
 body {
@@ -511,6 +515,10 @@ section {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 15px;
+  /* Focus styling for accessibility */
+}
+.portfolios .portfolio-item img:focus {
+  outline: 8px solid var(--color-secondary);
 }
 .portfolios .portfolio-item .hover-items {
   width: 100%;
@@ -553,8 +561,12 @@ section {
   justify-content: center;
   align-items: center;
   transition: var(--transition-1);
+  /* Focus styling for accessibility */
   /* Setting Icon size and colour */
   /* Change in Icon colour and background colour when hovering over */
+}
+.portfolios .portfolio-item .hover-items .icons .icon:focus {
+  outline: 5px solid var(--color-white);
 }
 .portfolios .portfolio-item .hover-items .icons .icon i {
   font-size: 1.5rem;
@@ -576,7 +588,7 @@ section {
 /* Contact Section Styles */
 .contact-content-container {
   display: flex;
-  padding-top: 3.5rem;
+  padding-top: 2.5rem;
   /* Styling for input section in contact page */
 }
 .contact-content-container .left-contact {
@@ -628,12 +640,16 @@ section {
   border-radius: 50%;
   margin: 0 0.4rem;
   transition: var(--transition-1);
+  /* Focus styling for accessibility */
 }
 .contact-content-container .left-contact .contact-icon a:hover {
   background-color: var(--color-secondary);
 }
 .contact-content-container .left-contact .contact-icon a:hover i {
   color: var(--color-primary);
+}
+.contact-content-container .left-contact .contact-icon a:focus {
+  outline: 5px solid var(--color-secondary);
 }
 .contact-content-container .left-contact .contact-icon a i {
   display: flex;
@@ -651,7 +667,7 @@ section {
   text-transform: uppercase;
 }
 .contact-content-container .right-contact .input-control {
-  margin: 1.5rem 0;
+  margin: 0.8rem 0;
 }
 .contact-content-container .right-contact .input-control input, .contact-content-container .right-contact .input-control textarea {
   border-radius: 30px;
@@ -664,19 +680,34 @@ section {
   width: 100%;
   color: var(--color-white);
   resize: none;
+  /* Focus styling for accessibility */
 }
-.contact-content-container .right-contact .input-control-2 {
-  display: flex;
+.contact-content-container .right-contact .input-control input:focus, .contact-content-container .right-contact .input-control textarea:focus {
+  outline: 5px solid var(--color-secondary);
 }
-.contact-content-container .right-contact .input-control-2 .label-content {
+.contact-content-container .right-contact .input-control .label-content {
   padding-left: 1.5rem;
 }
-.contact-content-container .right-contact .input-control-2 :last-child {
+.contact-content-container .right-contact .input-control :last-child {
   margin-left: 1.5rem;
 }
 .contact-content-container .right-contact .submit-button {
   display: flex;
   justify-content: flex-start;
+  padding-left: 1.5rem;
+  /* Focus styling for accessibility */
+}
+.contact-content-container .right-contact .submit-button:focus {
+  outline: 5px solid var(--color-secondary);
+}
+
+/* Form Success and Error Indicator styling */
+.input-control.error #name, .input-control.error #email, .input-control.error #subject, .input-control.error #message {
+  border: 2px solid var(--error-color);
+}
+
+.input-control.success #name, .input-control.success #email, .input-control.success #subject, .input-control.success #message {
+  border: 2px solid var(--color-secondary);
 }
 
 /* Independant Content*/
@@ -695,7 +726,11 @@ section {
   position: fixed;
   transition: var(--transition-1);
   box-shadow: var(--box-shadow-1);
+  /* Focus styling for accessibility */
   /* When the button is clicked raise it up */
+}
+.theme-button:focus {
+  outline: 5px solid var(--color-white);
 }
 .theme-button:active {
   transform: translateY(-3px);
@@ -726,6 +761,7 @@ section {
   overflow: hidden;
   /* Styling for the download button icon*/
   /* Hover styling for download animation */
+  /* Focus styling for accessibility */
 }
 .main-button .button-text {
   padding: 0 2rem;
@@ -753,6 +789,9 @@ section {
 }
 .main-button:hover::before, .main-button:focus::before {
   transform: scaleX(1);
+}
+.main-button:focus {
+  outline: 5px solid var(--color-secondary);
 }
 
 /* Styling for the header text in the about text */

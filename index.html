@@ -408,7 +408,7 @@
                 <!-- Items in the portfolio section -->
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="assets/port1.jpg" alt="">
+                        <img src="assets/port1.jpg" alt="" tabindex="0">
                     </div>
                     <!-- Hover over image for each individual project -->
                     <div class="hover-items">
@@ -425,7 +425,7 @@
 
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="assets/port2.jpg" alt="">
+                        <img src="assets/port2.jpg" alt="" tabindex="0">
                     </div>
                     <!-- Hover over image for each individual project -->
                     <div class="hover-items">
@@ -442,7 +442,7 @@
 
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="assets/port3.jpg" alt="">
+                        <img src="assets/port3.jpg" alt="" tabindex="0">
                     </div>
                     <!-- Hover over image for each individual project -->
                     <div class="hover-items">
@@ -538,30 +538,37 @@
                         <h4>Enter your details</h4>
 
                         <form action="" class="contact-form" id="send-email">
-                            <div class="input-control input-control-2">
-                                <label for="name" hidden class="label-content">Name</label>
-                                <input type="text" id="name" required placeholder="Enter your name">
-                                <small></small>
-                                
-                                <label for="email" hidden class="label-content">Email</label>
-                                <input type="email" id="email" required placeholder="Enter your email">
-                                <small></small>
-                            </div>
 
                             <div class="input-control">
+                                <label for="name" hidden class="label-content">Name</label>
+                                <input type="text" id="name" placeholder="Enter your name" autocomplete="off">
+                                <br>
+                                <small class="smallText"></small>
+                            </div>
+                                
+                            <div class="input-control">
+                                <label for="email" hidden class="label-content">Email</label>
+                                <input type="email" id="email" placeholder="Enter your email" autocomplete="off">
+                                <br>
+                                <small class="smallText"></small>
+                            </div>
+                
+                            <div class="input-control">
                                 <label for="subject" hidden class="label-content">Subject</label>
-                                <input type="text" id="subject" required placeholder="Enter your subject">
-                                <small></small>
+                                <input type="text" id="subject" placeholder="Enter your subject" autocomplete="off">
+                                <br>
+                                <small class="smallText"></small>
                             </div>
 
                             <div class="input-control">
                                 <label for="message" hidden class="label-content">Message</label>
-                                <textarea name="" id="message" cols="15" rows="8" placeholder="Type message here..."></textarea>
-                                <small></small>
+                                <textarea name="" id="message" cols="15" rows="8" placeholder="Type message here..." autocomplete="off"></textarea>
+                                <br>
+                                <small class="smallText"></small>
                             </div>
 
-                            <div class="submit-button" onclick="sendMail()">
-                                <a href="#contact" class="main-button">
+                            <div class="submit-button">
+                                <a href="#contact" class="main-button" onclick="sendMail()">
                                     <span class="button-text">
                                         Submit
                                     </span>
@@ -574,30 +581,30 @@
         </section>
     </main>
 
+    <div class="theme-button" tabindex="0">
+        <i class="fas fa-adjust"></i>
+    </div>
+
     <!-- Buttons -->
     <div class="controls">
 
         <!-- Control Buttons on the right hand side of the website -->
-        <div class="control control-1 active-button" data-id="home">
+        <div class="control control-1 active-button" data-id="home" tabindex="0">
             <i class="fa-solid fa-house"></i>
         </div>
 
-        <div class="control control-2" data-id="about">
+        <div class="control control-2" data-id="about" tabindex="0">
             <i class="fa-solid fa-address-card"></i>
         </div>
 
-        <div class="control control-3" data-id="portfolio">
+        <div class="control control-3" data-id="portfolio" tabindex="0">
             <i class="fa-solid fa-briefcase"></i>
         </div>
 
-        <div class="control control-5" data-id="contact">
+        <div class="control control-5" data-id="contact" tabindex="0">
             <i class="fa-solid fa-envelope"></i>
         </div>
 
-    </div>
-
-    <div class="theme-button">
-        <i class="fas fa-adjust"></i>
     </div>
 
     <!-- Javascript Code-->

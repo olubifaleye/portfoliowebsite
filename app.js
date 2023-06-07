@@ -45,11 +45,46 @@ function pageTransitions(){
         }
     })
 
+    //Sections Active class
+    allSections.addEventListener('keypress', (e) =>{
+        //content inside the target of the cursor click
+        const id = e.target.dataset.id; 
+
+        if(e.key === 'Enter'){
+
+            if(id){
+                //remove seelcted from the other buttons
+                sectionButtons.forEach((button) =>{
+                    button.classList.remove('active')
+                })
+                e.target.classList.add('active')
+
+                //Hide other sections 
+                sections.forEach((section) => {
+                    section.classList.remove('active')
+                })
+                
+                //collect and store an element from index.html by id 
+                const element = document.getElementById(id);
+
+                element.classList.add('active')
+            }
+        }
+    })
+
     //Toggle Theme
     const themeButton = document.querySelector('.theme-button');
     themeButton.addEventListener('click', () =>{
         let element = document.body;
         element.classList.toggle('light-mode');
+    })
+
+    themeButton.addEventListener('keypress', (e) =>{
+
+        if(e.key === 'Enter'){
+            let element = document.body;
+            element.classList.toggle('light-mode');
+        }
     })
 }
 

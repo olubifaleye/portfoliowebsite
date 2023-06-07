@@ -65,6 +65,7 @@ function sendMail(){
         // and if its not blank, it must be between min and max integer values
         if (!isRequired(name)) {
             showError(nameElement, 'Name cannot be blank.');
+            
         } else if (!isBetween(name.length, min, max)) {
             showError(nameElement, `Name must be between ${min} and ${max} characters.`)
         } else {
@@ -112,7 +113,6 @@ function sendMail(){
 
         // set variable subject to subjectElement value
         const subject = subjectElement.value.trim();
-        console.log(subject);
 
         // Validation for subject field to check that it cant be blank 
         // and if its not blank, it must be between min and max integer values
