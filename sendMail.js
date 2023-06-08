@@ -188,23 +188,6 @@ function sendMail(){
         error.textContent = '';
     }
 
-    // form.addEventListener('input', function (e) {
-    //     switch (e.target.id) {
-    //         case 'name':
-    //             checkName();
-    //             break;
-    //         case 'email':
-    //             checkEmail();
-    //             break;
-    //         case 'subject':
-    //             checkSubject();
-    //             break;
-    //         case 'message':
-    //             checkMessage();
-    //             break;
-    //     }
-    // });
-
     // assign variables to functions
     let isNameValid = checkName(),
         isEmailValid = checkEmail(),

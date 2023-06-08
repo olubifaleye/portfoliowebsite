@@ -42,6 +42,8 @@ function pageTransitions(){
             const element = document.getElementById(id);
 
             element.classList.add('active')
+
+            document.getElementById("send-email").reset();
         }
     })
 

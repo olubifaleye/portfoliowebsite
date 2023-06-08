@@ -198,10 +198,10 @@ section{
             pointer-events: none;
         }
 
-        // /* Focus styling for accessibility */
-        // &:focus{
-        //     outline: 7px solid var(--color-white);   
-        // }   
+        /* Focus styling for accessibility */
+        &:focus{
+            outline: 5px solid var(--color-white);   
+        }   
     }
 }
 
