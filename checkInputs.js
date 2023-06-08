@@ -159,7 +159,7 @@ const showSuccess = (input) => {
     error.textContent = '';
 }
 
-const debounce = (fn, delay = 500) => {
+const debounce = (fn, delay = 300) => {
     let timeoutId;
     return (...args) => {
         // cancel the previous timer

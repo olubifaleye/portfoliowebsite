@@ -2,6 +2,8 @@
 // Function to send input contents as an email to my portfolio email
 function sendMail(){
 
+    const allInputControls = document.querySelectorAll(".input-control");
+
     //IDs from EmailJS for connection and email template
     const serviceID = "service_cdjh67i";
     const templateID = "template_y0lu84t";
@@ -211,6 +213,11 @@ function sendMail(){
                 document.getElementById("subject").value = "";
                 document.getElementById("message").value = "";
                 console.log(res);
+
+                //remove success class from all the input control divs
+                allInputControls.forEach((inputControl) =>{
+                    inputControl.classList.remove('success')
+                })
                 
                 //Fire a toast top right to show to user that email has been sent
                 Toast.fire({
