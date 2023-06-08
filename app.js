@@ -2,6 +2,12 @@ const sections = document.querySelectorAll('.section')
 const sectionButtons = document.querySelectorAll('.controls')
 const sectionButton = document.querySelectorAll('.control')
 const allSections = document.querySelector('.main-content')
+const allInputControls = document.querySelectorAll(".input-control");
+
+const smallName = document.querySelector('#smallName');
+const smallEmail = document.querySelector('#smallEmail');
+const smallSubject = document.querySelector('#smallSubject');
+const smallMessage = document.querySelector('#smallMessage');
 
 //page transitions
 function pageTransitions(){
@@ -42,8 +48,24 @@ function pageTransitions(){
             const element = document.getElementById(id);
 
             element.classList.add('active')
+            
+            // If ID of section isnt contact
+            if(id !== "contact"){
 
-            document.getElementById("send-email").reset();
+                //reset the form
+                document.getElementById("send-email").reset();
+
+                //remove erorr class from all the input control divs
+                allInputControls.forEach((inputControl) =>{
+                    inputControl.classList.remove('error')
+                })
+
+                // Reset the text content of the small tag
+                smallName.textContent = '';
+                smallEmail.textContent = '';
+                smallSubject.textContent = '';
+                smallMessage.textContent = '';
+            }
         }
     })
 
@@ -70,6 +92,24 @@ function pageTransitions(){
                 const element = document.getElementById(id);
 
                 element.classList.add('active')
+
+                // If ID of section isnt contact
+                if(id !== "contact"){
+
+                    //reset the form
+                    document.getElementById("send-email").reset();
+
+                    //remove erorr class from all the input control divs
+                    allInputControls.forEach((inputControl) =>{
+                        inputControl.classList.remove('error')
+                    })
+
+                    // Reset the text content of the small tag
+                    smallName.textContent = '';
+                    smallEmail.textContent = '';
+                    smallSubject.textContent = '';
+                    smallMessage.textContent = '';
+                }
             }
         }
     })

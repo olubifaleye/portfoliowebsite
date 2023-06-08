@@ -815,6 +815,11 @@ section{
     #name, #email, #subject, #message{
         border: 2px solid var(--error-color);
     }
+
+    .smallText{
+        visibility: visible;
+        color: var(--error-color);
+    }
 }
 
 .input-control.success{

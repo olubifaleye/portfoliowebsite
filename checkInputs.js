@@ -159,20 +159,6 @@ const showSuccess = (input) => {
     error.textContent = '';
 }
 
-// Function to show reset when you navigate out of contact page
-const showReset = (input) => {
-
-    // get the inputControl element
-    const inputControl = input.parentElement;
-
-    // remove the error class
-    inputControl.classList.remove('error');
-
-    // hide the error message
-    const error = inputControl.querySelector('small');
-    error.textContent = '';
-}
-
 const debounce = (fn, delay = 500) => {
     let timeoutId;
     return (...args) => {

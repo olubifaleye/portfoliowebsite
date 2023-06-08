@@ -709,6 +709,10 @@ section {
 .input-control.error #name, .input-control.error #email, .input-control.error #subject, .input-control.error #message {
   border: 2px solid var(--error-color);
 }
+.input-control.error .smallText {
+  visibility: visible;
+  color: var(--error-color);
+}
 
 .input-control.success #name, .input-control.success #email, .input-control.success #subject, .input-control.success #message {
   border: 2px solid var(--color-secondary);
