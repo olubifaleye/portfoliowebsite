@@ -79,8 +79,9 @@ a {
 
 /* Header Styling */
 header {
-  height: 100vh;
+  min-height: 100vh;
   color: var(--color-white);
+  overflow: hidden;
 }
 
 /* Section Styling */
@@ -188,7 +189,7 @@ section {
 .header-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  height: 100%;
+  min-height: 100vh;
   position: relative;
   /* Styling for the right side of the header text */
 }
@@ -831,4 +832,280 @@ section {
   font-size: 8rem;
   -webkit-text-fill-color: solid;
   -webkit-text-stroke: 1px;
+}
+
+@media screen and (max-width: 600px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+  .about-container .right-about {
+    padding-top: 3rem;
+    grid-template-columns: 1fr;
+  }
+  .about-container .left-about {
+    padding-right: 0;
+  }
+  .about-container .left-about p {
+    padding-left: 0;
+  }
+  .timeline {
+    grid-template-columns: 1fr;
+    padding-bottom: 6rem;
+  }
+  .about-statistics .progress-bars {
+    grid-template-columns: 1fr;
+  }
+  .portfolios {
+    grid-template-columns: 1fr;
+    padding-bottom: 6rem;
+  }
+  .section {
+    padding: 2rem 2.5rem;
+  }
+  .main-title {
+    padding-top: 2rem;
+    height: 100%;
+    width: 100%;
+  }
+  .main-title h2 {
+    font-size: 2rem;
+  }
+  .main-title h2 span {
+    font-size: 2.5rem;
+  }
+  .main-title h2 .big-text {
+    font-size: 3.5rem;
+  }
+  .controls {
+    top: 88%;
+    bottom: 0;
+    flex-direction: row;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45%;
+    background-color: var(--color-grey-5);
+    border-radius: 25px;
+    height: 8%;
+  }
+  .controls .control {
+    margin: 1rem 0.3rem;
+  }
+}
+@media screen and (max-width: 1432px) {
+  header {
+    padding: 0 !important;
+  }
+  .section {
+    padding: 7rem 11rem;
+  }
+  .about-container .left-about h3 {
+    font-size: 1.6rem;
+  }
+  .about-container .right-about .about-item .about-text .large-text {
+    font-size: 2rem;
+  }
+  .about-container .right-about .about-item .about-text .small-text {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1.8rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+  .timeline {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 6rem;
+  }
+  .timeline .timeline-item h5 {
+    font-size: 1.3rem;
+  }
+  .timeline .timeline-item h5 span {
+    font-size: 1.2rem;
+  }
+  .main-title h2 {
+    font-size: 3.5rem;
+  }
+  .main-title h2 span {
+    font-size: 3.5rem;
+  }
+  .main-title h2 .big-text {
+    font-size: 6rem;
+  }
+  .contact-content-container {
+    flex-direction: column;
+  }
+  .contact-content-container .right-contact {
+    margin-left: 0;
+    margin-top: 2.5rem;
+  }
+}
+@media screen and (max-width: 1070px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+  .about-container .right-about {
+    padding-top: 2.5rem;
+  }
+  .portfolios {
+    grid-template-columns: 1fr 1fr;
+  }
+  .portfolio-text {
+    padding-top: 5rem;
+  }
+  .main-title h2 {
+    font-size: 3rem;
+  }
+  .main-title h2 span {
+    font-size: 3rem;
+  }
+  .main-title h2 .big-text {
+    font-size: 5.5rem;
+  }
+}
+@media screen and (max-width: 970px) {
+  header {
+    padding: 0;
+  }
+  header .right-header {
+    padding: 0 !important;
+  }
+  .theme-button {
+    width: 55px;
+    height: 55px;
+    top: 1.5%;
+  }
+  .header-content {
+    grid-template-columns: 1fr;
+    padding-bottom: 6rem;
+  }
+  .left-header .header-shape {
+    display: none;
+  }
+  .right-header {
+    grid-row: 1;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .right-header .name {
+    font-size: 2.5rem !important;
+  }
+  .header-content .left-header .image {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .section {
+    padding: 7rem 6rem;
+  }
+  .main-title h2 {
+    font-size: 2.8rem;
+  }
+  .main-title h2 span {
+    font-size: 2.8rem;
+  }
+  .main-title h2 .big-text {
+    font-size: 3.8rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .right-header .name {
+    padding-top: 3rem;
+    font-size: 1.5rem !important;
+  }
+  .right-header p {
+    font-size: 0.8rem;
+  }
+  .section {
+    padding: 2rem;
+  }
+  .portfolios {
+    grid-template-columns: 1fr;
+  }
+  .main-title h2 {
+    font-size: 2rem;
+  }
+  .main-title h2 span {
+    font-size: 2rem;
+  }
+  .main-title h2 .big-text {
+    font-size: 3rem;
+  }
+  .about-container .left-about h3 {
+    font-size: 1.2rem;
+  }
+  .about-container .right-about .about-item .about-text .large-text {
+    font-size: 1.5rem;
+  }
+  .about-container .right-about .about-item .about-text .small-text {
+    font-size: 1rem;
+  }
+  h4 {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  .timeline {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 6rem;
+  }
+  .timeline .timeline-item h5 {
+    font-size: 0.9rem;
+  }
+  .timeline .timeline-item h5 span {
+    font-size: 0.8rem;
+  }
+  .portfolio-text {
+    padding-top: 5rem;
+  }
+  .contact-content-container {
+    padding-bottom: 7rem;
+  }
+  .contact-content-container .left-contact h3 {
+    font-size: 1.2rem;
+  }
+  .contact-content-container .left-contact .contact-item .icon, .contact-content-container .left-contact .contact-item p {
+    font-size: 0.8rem;
+  }
+  .contact-content-container .left-contact .contact-icon {
+    margin-top: 0.5rem !important;
+  }
+  .contact-content-container .left-contact .contact-icon a {
+    width: 40px;
+    height: 40px;
+  }
+  .contact-content-container .left-contact .contact-icon a i {
+    font-size: 1rem;
+  }
+  .contact-content-container .right-contact h4 {
+    margin-top: 0rem !important;
+  }
+  .contact-content-container .right-contact .input-control {
+    margin: 0.8rem 0;
+  }
+  .contact-content-container .right-contact .input-control .smallText {
+    font-size: 0.8rem;
+    margin-left: 0.7rem;
+  }
+  .contact-content-container .right-contact .input-control input, .contact-content-container .right-contact .input-control textarea {
+    font-size: 0.8rem;
+  }
+  .controls {
+    top: 88%;
+    bottom: 0;
+    flex-direction: row;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 73%;
+    background-color: var(--color-grey-5);
+    border-radius: 55px;
+    height: 11%;
+  }
+  .controls .control {
+    margin: 1rem 0.3rem;
+  }
 }/*# sourceMappingURL=styles.css.map */
