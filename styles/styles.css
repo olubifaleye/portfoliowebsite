@@ -834,64 +834,6 @@ section {
   -webkit-text-stroke: 1px;
 }
 
-@media screen and (max-width: 600px) {
-  .about-container {
-    grid-template-columns: 1fr;
-  }
-  .about-container .right-about {
-    padding-top: 3rem;
-    grid-template-columns: 1fr;
-  }
-  .about-container .left-about {
-    padding-right: 0;
-  }
-  .about-container .left-about p {
-    padding-left: 0;
-  }
-  .timeline {
-    grid-template-columns: 1fr;
-    padding-bottom: 6rem;
-  }
-  .about-statistics .progress-bars {
-    grid-template-columns: 1fr;
-  }
-  .portfolios {
-    grid-template-columns: 1fr;
-    padding-bottom: 6rem;
-  }
-  .section {
-    padding: 2rem 2.5rem;
-  }
-  .main-title {
-    padding-top: 2rem;
-    height: 100%;
-    width: 100%;
-  }
-  .main-title h2 {
-    font-size: 2rem;
-  }
-  .main-title h2 span {
-    font-size: 2.5rem;
-  }
-  .main-title h2 .big-text {
-    font-size: 3.5rem;
-  }
-  .controls {
-    top: 88%;
-    bottom: 0;
-    flex-direction: row;
-    justify-content: center;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 45%;
-    background-color: var(--color-grey-5);
-    border-radius: 25px;
-    height: 8%;
-  }
-  .controls .control {
-    margin: 1rem 0.3rem;
-  }
-}
 @media screen and (max-width: 1432px) {
   header {
     padding: 0 !important;
@@ -943,6 +885,16 @@ section {
   }
 }
 @media screen and (max-width: 1070px) {
+  .right-header {
+    padding-right: 10rem !important;
+  }
+  .right-header .name {
+    font-size: 1.5rem !important;
+  }
+  .right-header p {
+    margin: 1.5rem 0;
+    line-height: 2rem;
+  }
   .about-container {
     grid-template-columns: 1fr;
   }
@@ -956,13 +908,13 @@ section {
     padding-top: 5rem;
   }
   .main-title h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .main-title h2 span {
     font-size: 3rem;
   }
   .main-title h2 .big-text {
-    font-size: 5.5rem;
+    font-size: 4.5rem;
   }
 }
 @media screen and (max-width: 970px) {
@@ -1009,6 +961,103 @@ section {
     font-size: 3.8rem;
   }
 }
+@media screen and (max-width: 600px) {
+  .right-header .name {
+    padding-top: 2rem;
+    font-size: 1.7rem !important;
+  }
+  .right-header p {
+    font-size: 1.1rem;
+  }
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+  .about-container .right-about {
+    padding-top: 3rem;
+    grid-template-columns: 1fr;
+  }
+  .about-container .right-about .about-item .about-text .large-text {
+    font-size: 1.5rem;
+  }
+  .about-container .right-about .about-item .about-text .small-text {
+    font-size: 1rem;
+  }
+  .about-container .left-about {
+    padding-right: 0;
+  }
+  .about-container .left-about h3 {
+    font-size: 1.2rem;
+  }
+  .about-container .left-about p {
+    padding-left: 0;
+  }
+  h4 {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+  .timeline {
+    grid-template-columns: 1fr;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 6rem;
+  }
+  .timeline .timeline-item h5 {
+    font-size: 1rem;
+  }
+  .timeline .timeline-item h5 span {
+    font-size: 0.9rem;
+  }
+  .about-statistics h4 {
+    font-size: 1.2rem;
+  }
+  .about-statistics .progress-bars {
+    grid-template-columns: 1fr;
+  }
+  .portfolios {
+    grid-template-columns: 1fr;
+    padding-bottom: 6rem;
+  }
+  .section {
+    padding: 2rem 2.5rem;
+  }
+  .main-title {
+    padding-top: 2rem;
+    height: 100%;
+    width: 100%;
+  }
+  .main-title h2 {
+    font-size: 2.8rem;
+  }
+  .main-title h2 span {
+    font-size: 3.3rem;
+  }
+  .main-title h2 .big-text {
+    font-size: 3.8rem;
+  }
+  .contact-content-container {
+    padding-bottom: 7rem;
+  }
+  .contact-content-container .left-contact h3 {
+    font-size: 1.2rem;
+  }
+  .controls {
+    top: 88%;
+    bottom: 0;
+    flex-direction: row;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    background-color: var(--color-grey-5);
+    border-radius: 55px;
+    height: 10%;
+  }
+  .controls .control {
+    margin: 1rem 0.3rem;
+  }
+}
 @media screen and (max-width: 500px) {
   .right-header .name {
     padding-top: 3rem;
@@ -1027,7 +1076,7 @@ section {
     font-size: 2rem;
   }
   .main-title h2 span {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   .main-title h2 .big-text {
     font-size: 3rem;
@@ -1067,7 +1116,15 @@ section {
   .contact-content-container .left-contact h3 {
     font-size: 1.2rem;
   }
-  .contact-content-container .left-contact .contact-item .icon, .contact-content-container .left-contact .contact-item p {
+  .contact-content-container .left-contact .contact-info {
+    width: 109%;
+    position: relative;
+    left: -4%;
+  }
+  .contact-content-container .left-contact .contact-info .contact-item .icon i {
+    font-size: 1rem !important;
+  }
+  .contact-content-container .left-contact .contact-info .contact-item .icon, .contact-content-container .left-contact .contact-info .contact-item p {
     font-size: 0.8rem;
   }
   .contact-content-container .left-contact .contact-icon {
