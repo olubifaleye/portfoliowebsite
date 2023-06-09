@@ -60,6 +60,11 @@ function pageTransitions(){
                     inputControl.classList.remove('error')
                 })
 
+                //remove success class from all the input control divs
+                allInputControls.forEach((inputControl) =>{
+                    inputControl.classList.remove('success')
+                })
+
                 // Reset the text content of the small tag
                 smallName.textContent = '';
                 smallEmail.textContent = '';
@@ -104,6 +109,11 @@ function pageTransitions(){
                         inputControl.classList.remove('error')
                     })
 
+                    //remove success class from all the input control divs
+                    allInputControls.forEach((inputControl) =>{
+                        inputControl.classList.remove('success')
+                    })
+                    
                     // Reset the text content of the small tag
                     smallName.textContent = '';
                     smallEmail.textContent = '';

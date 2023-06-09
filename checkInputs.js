@@ -8,19 +8,19 @@ const messageElement = document.querySelector('#message');
 const form = document.querySelector('#send-email');
 
 //function returns true if the input argument is empty
-const isRequired = value => value === '' ? false : true;
+export const isRequired = value => value === '' ? false : true;
 
 //function returns false if the length argument is not between the min and max argument
-const isBetween = (length, min, max) => length < min || length > max ? false : true;
+export const isBetween = (length, min, max) => length < min || length > max ? false : true;
 
 //To check the email is valid
-const isEmail = (email) => {
+export const isEmail = (email) => {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
 };
 
 // Function to valiate name input field
-const checkName = () => {
+export const checkName = () => {
 
     // set valid boolean to false
     let valid = false;
@@ -49,7 +49,7 @@ const checkName = () => {
 }
 
 // Function to validate email input field
-const checkEmail = () => {
+export const checkEmail = () => {
 
     // set valid boolean to false
     let valid = false;
@@ -73,7 +73,7 @@ const checkEmail = () => {
 }
 
 // Function to valiate subject input field
-const checkSubject = () => {
+export const checkSubject = () => {
 
     // set valid boolean to false
     let valid = false;
@@ -102,7 +102,7 @@ const checkSubject = () => {
 }
 
 // Function to valiate subject input field
-const checkMessage = () => {
+export const checkMessage = () => {
 
     // set valid boolean to false
     let valid = false;
@@ -130,7 +130,7 @@ const checkMessage = () => {
 }
 
 // Function to show error indicator
-const showError = (input, message) => {
+export const showError = (input, message) => {
 
     // get the inputControl element
     const inputControl = input.parentElement;
@@ -145,7 +145,7 @@ const showError = (input, message) => {
 };
 
 // Function to show success indicator
-const showSuccess = (input) => {
+export const showSuccess = (input) => {
 
     // get the inputControl element
     const inputControl = input.parentElement;
