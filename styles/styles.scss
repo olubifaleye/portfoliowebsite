@@ -484,7 +484,7 @@ section{
     text-transform: uppercase;
     font-size: 1.4rem;
     text-align: center;
-    padding: 3.5rem 0;
+    padding: 4rem 0;
     left: 0;
     right: 0;
     position: relative;
@@ -574,7 +574,7 @@ section{
 .portfolio-item-locator{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2rem;
+    grid-gap: 10rem;
     margin-top: 3rem;
 
     a{
