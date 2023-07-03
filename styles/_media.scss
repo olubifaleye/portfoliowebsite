@@ -107,6 +107,11 @@
         grid-template-columns: 1fr 1fr;
     }
 
+    .portfolio-item-locator{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 0.5rem;
+    }
+
     .portfolio-text{
         padding-top: 5rem;
     }
@@ -278,6 +283,11 @@
         padding-bottom: 6rem;
     }
 
+    .portfolio-item-locator{
+        grid-template-columns: 1fr;
+        grid-gap: 0.5rem;
+    }
+
     .section{
         padding: 2rem 2.5rem;
     }  
@@ -414,6 +424,11 @@
 
     .portfolio-text{
         padding-top: 5rem;
+    }
+
+    .portfolio-item-locator{
+        grid-template-columns: 1fr;
+        grid-gap: 0.5rem;
     }
     
     .contact-content-container{

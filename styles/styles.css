@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   list-style-type: none;
+  scroll-behavior: smooth;
 }
 
 /* variables for css styles */
@@ -437,6 +438,41 @@ section {
   transform: translateX(-50%);
 }
 
+/* Styling for statistics and timeline headers */
+.portfolio-genre-title-first {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 0.5rem;
+  left: 0;
+  right: 0;
+  position: relative;
+}
+
+/* Styling for statistics and timeline headers */
+.portfolio-genre-title {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 0.5rem;
+  left: 0;
+  right: 0;
+  position: relative;
+  /* Create a seperator line above my skills header */
+}
+.portfolio-genre-title::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  background-color: var(--color-grey-5);
+  height: 1px;
+  width: 40%;
+  transform: translateX(-50%);
+}
+
 /* Styling for timeline information format*/
 .timeline {
   display: grid;
@@ -499,12 +535,38 @@ section {
   text-align: center;
 }
 
+.portfolio-item-locator {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10rem;
+  margin-top: 3rem;
+}
+.portfolio-item-locator a {
+  position: relative;
+  border-radius: 15px;
+  background-color: var(--color-timeline);
+  color: var(--color-timeline-duration);
+  text-align: center;
+  /* Focus styling for accessibility */
+}
+.portfolio-item-locator a:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+.portfolio-item-locator a:focus {
+  outline: 5px solid var(--color-white);
+}
+
 /* Portfolio containers in grid format */
 .portfolios {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   margin-top: 3rem;
+  padding-bottom: 3rem;
   /* Cells in Grid styels*/
 }
 .portfolios .portfolio-item {
@@ -904,6 +966,10 @@ section {
   .portfolios {
     grid-template-columns: 1fr 1fr;
   }
+  .portfolio-item-locator {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5rem;
+  }
   .portfolio-text {
     padding-top: 5rem;
   }
@@ -1019,6 +1085,10 @@ section {
     grid-template-columns: 1fr;
     padding-bottom: 6rem;
   }
+  .portfolio-item-locator {
+    grid-template-columns: 1fr;
+    grid-gap: 0.5rem;
+  }
   .section {
     padding: 2rem 2.5rem;
   }
@@ -1109,6 +1179,10 @@ section {
   }
   .portfolio-text {
     padding-top: 5rem;
+  }
+  .portfolio-item-locator {
+    grid-template-columns: 1fr;
+    grid-gap: 0.5rem;
   }
   .contact-content-container {
     padding-bottom: 7rem;
