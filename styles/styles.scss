@@ -582,6 +582,7 @@ section{
         position: relative;
         border-radius: 15px;
         background-color: var(--color-main-title-background);
+        scroll-behavior: smooth;
     }
 }
 
@@ -591,8 +592,7 @@ section{
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
     margin-top: 3rem;
-    margin-bottom: 2rem;
-
+    padding-bottom: 3rem;
     /* Cells in Grid styels*/
     .portfolio-item{
         position: relative;
