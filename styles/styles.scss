@@ -591,12 +591,12 @@ section{
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
     margin-top: 3rem;
+    margin-bottom: 2rem;
 
     /* Cells in Grid styels*/
     .portfolio-item{
         position: relative;
         border-radius: 15px;
-        padding-bottom: 3rem;
 
         /* Image Cover for grid cells */
         img{
