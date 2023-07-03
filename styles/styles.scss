@@ -571,6 +571,19 @@ section{
     text-align: center;
 }
 
+.portfolio-item-locator{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    margin-top: 3rem;
+
+    a{
+        position: relative;
+        border-radius: 15px;
+        background-color: var(--color-main-title-background);
+    }
+}
+
 /* Portfolio containers in grid format */
 .portfolios{
     display: grid;
