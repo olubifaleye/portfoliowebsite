@@ -540,7 +540,7 @@ section {
   justify-content: center;
   align-items: center;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 10rem;
   margin-top: 3rem;
 }
@@ -575,6 +575,11 @@ section {
   /* Image Cover for grid cells */
   /* Card that is displayed when a portfolio image is hovered over */
   /* When hovered over, a link to the projects Git repo is revealed via an icon */
+}
+.portfolios .portfolio-item .icon-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3rem;
 }
 .portfolios .portfolio-item img {
   width: 100%;
