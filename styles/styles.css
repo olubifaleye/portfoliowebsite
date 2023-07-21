@@ -572,6 +572,7 @@ section {
 .portfolios .portfolio-item {
   position: relative;
   border-radius: 15px;
+  text-align: center;
   /* Image Cover for grid cells */
   /* Card that is displayed when a portfolio image is hovered over */
   /* When hovered over, a link to the projects Git repo is revealed via an icon */
