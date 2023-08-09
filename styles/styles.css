@@ -395,7 +395,7 @@ section {
   width: 25%;
 }
 .about-statistics .progress-bars .progress-bar .progress-container .progress .git {
-  width: 70%;
+  width: 80%;
 }
 .about-statistics .progress-bars .progress-bar .progress-container .progress .figma {
   width: 90%;
@@ -414,6 +414,9 @@ section {
 }
 .about-statistics .progress-bars .progress-bar .progress-container .progress .video-editing {
   width: 40%;
+}
+.about-statistics .progress-bars .progress-bar .progress-container .progress .tableau {
+  width: 65%;
 }
 
 /* Styling for statistics and timeline headers */
