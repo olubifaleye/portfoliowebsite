@@ -1,3 +1,100 @@
+// Media queries for when the screen size is between 1069px and 1435px
+@media screen and (min-width: 1069px) and (max-width: 1432px) {
+
+    .right-header{
+
+        padding-right: 10rem !important;
+        .name{
+            font-size: 1.5rem !important;
+        }
+
+        p{
+            margin: 1.5rem 0;
+            line-height: 2rem;
+        }
+    }
+
+    header{
+        padding: 0 !important;
+    }
+
+    .section{
+        padding: 7rem 11rem;
+    }
+
+    
+
+    .about-container{
+
+        .left-about{
+            h3{
+                font-size: 1.6rem;
+            }
+        }
+
+        .right-about{
+            .about-item{
+                .about-text{
+                    .large-text{
+                        font-size: 2rem;
+                    }
+
+                    .small-text{
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+
+    h4{
+        font-size: 1.8rem;
+    }
+
+    p{
+        font-size: 1.2rem;
+    }
+
+    .timeline{
+
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-bottom: 6rem;
+
+        .timeline-item{
+            h5{
+                font-size: 1.3rem;
+
+                span{
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+    .main-title{
+        h2{
+            font-size: 3rem !important;
+            span{
+                font-size: 3rem !important;
+            }
+            .big-text{
+                font-size: 5rem !important;
+            }
+        }
+    }
+
+    // put input form underneath the information section from 'left-contact'
+    .contact-content-container{
+        flex-direction: column;
+
+        .right-contact{
+            margin-left: 0;
+            margin-top: 2.5rem;
+        }
+    }
+}
+
 // Media queries for when the screen size is 1432px or less
 @media screen and (max-width: 1432px) {
 
